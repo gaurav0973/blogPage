@@ -1,17 +1,17 @@
-import config from "../config/config.js";
+import conf from "../conf/conf.js"
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
     
-    // class members 
+    // class members -> sare endpoints me ye cahiye
     client = new Client();
     account;
 
     // constructor
     constructor(){
         this.client
-            .setEndpoint(config.appwriteUrl)
-            .setProject(config.appwriteProjectId);
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);    
     }
 
