@@ -1,12 +1,14 @@
 import React from "react";
-import { Signup as SignupComponent } from "../components";
+import { Container, PostForm } from "../components";
 
-function Signup() {
+function AddPost() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-white dark:bg-gray-900">
-      <SignupComponent />
+      <Container>
+        <PostForm />
+      </Container>
     </div>
   );
 }
 
-export default Signup;
+export default AddPost;

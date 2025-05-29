@@ -5,14 +5,6 @@ export class AuthService {
   client = new Client();
   account;
 
-  /*************  ✨ Windsurf Command ⭐  *************/
-  /**
-   * Initializes a new instance of the AuthService class.
-   * Sets up the Appwrite client with endpoint and project configurations,
-   * and initializes an Account instance for user authentication.
-   */
-
-  /*******  6c567d20-47ee-4cce-99d0-ad2570cfffc3  *******/
   constructor() {
     this.client
       .setEndpoint(conf.appwriteUrl)
@@ -41,7 +33,7 @@ export class AuthService {
 
   async login({ email, password }) {
     try {
-      return await this.account.createEmailSession(email, password);
+      return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
       throw error;
     }
